@@ -21,4 +21,3 @@ export type pickupPointCreator = {
     latitude: string,
     longitude: string
 }
-
