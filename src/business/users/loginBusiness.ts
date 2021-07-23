@@ -2,7 +2,7 @@ import { getUserByEmail } from "../../data/users/getUserByEmail"
 import { authentication } from "../../model/users/globalModels"
 import { loginDTO } from "../../model/users/loginModels"
 import { generateToken } from "../../services/authenticator"
-import { loginSchema } from "../../validations/loginSchema"
+import { loginSchema } from "../../validations/users/loginSchema"
 import { compare } from "../../services/hashManager"
 
 
