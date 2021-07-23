@@ -15,7 +15,7 @@ export const createPickupPoint = async (req: Request, res: Response) : Promise<v
 
         await createPickupPointBusiness(input)
 
-        res.status(200).send({ message: "Ponto de coleta adicionado com sucesso!" })
+        res.status(200).send({ message: "Ponto de coleta adicionado com sucesso" })
     }
     catch (error) {
 
