@@ -1,5 +1,5 @@
 import { selectPickupPoints } from "../../data/places/selectPickupsPoints"
-import { pickupPoints } from "../../model/places/getPickupPoints"
+import { pickupPoints } from "../../model/places/getPickupPointsModels"
 
 
 export const getPickupPointsBusiness = async () : Promise<pickupPoints> => {

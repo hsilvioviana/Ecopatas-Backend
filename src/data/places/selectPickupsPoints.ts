@@ -1,4 +1,4 @@
-import { pickupPoints } from "../../model/places/getPickupPoints"
+import { pickupPoints } from "../../model/places/getPickupPointsModels"
 import { connection } from "../connection"
 
 
