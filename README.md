@@ -8,6 +8,7 @@ Parte Backend do website da ONG Ecopatas
 - Pegar pontos de coletas ativos e pausados
 - Criar FAQ
 - Pegar FAQs
+- Fale Conosco
 ---
 
 ## - Login
@@ -154,6 +155,35 @@ Parte Backend do website da ONG Ecopatas
             "answer": "A Ecopatas fica em São Paulo"
             }
           ]
+        }
+
+        OU
+
+        { 
+            "error": Mensagem de erro
+        }
+
+---
+
+## - Fale Conosco
+### POST "/questions/contact"
+
+* Body
+
+        name = VARCHAR(64)
+        email = VARCHAR(64)
+        message = VARCHAR(2000)
+        
+        {
+            "name": "Silvio Viana",
+            "email": "silvio@teste.com",
+            "message": "Olá, eu tenho um gato que achei embaixo da ponte. Como eu posso conversar com vocês sobre uma possível castração dele?"
+        }
+
+* Resposta
+
+        {
+            "message": "Mensagem enviada com sucesso"
         }
 
         OU
