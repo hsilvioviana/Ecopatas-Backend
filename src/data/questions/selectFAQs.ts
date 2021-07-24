@@ -4,7 +4,7 @@ import { connection } from "../connection"
 
 export const selectFAQs = async () : Promise<faq[]> => {
 
-    const result = await connection.raw(`SELECT * FROM FAQs`)
+    const result = await connection.raw(`SELECT id, question, answer FROM FAQs ORDER BY createdAt`)
 
-    return result[0][0]
+    return result[0]
 }
