@@ -5,6 +5,7 @@ Parte Backend do website da ONG Ecopatas
 ## Funcionalidades
 - Login
 - Criar ponto de coleta
+- Pegar pontos de coletas ativos e pausados
 ---
 
 ## - Login
@@ -55,18 +56,48 @@ Parte Backend do website da ONG Ecopatas
         schedule = VARCHAR(255)
 
         {
-            "name": "Padaria do João",
-            "cep": "03634010",
+            "name": "Nino's Pet Shop",
+            "cep": "03644000",
             "neighborhood": "Penha",
-            "street": "Rua Dr. João Ribeiro",
-            "number": "456",
-            "schedule": "Ter. a sáb. 10 às 18h"
+            "street": "Rua Embirussu",
+            "number": "66A",
+            "schedule": "Seg 8 às 17h / Ter. e qua. 18 às 21h"
         }
 
 * Resposta
 
         {
             "message": "Ponto de coleta adicionado com sucesso"
+        }
+
+        OU
+
+        { 
+            "error": Mensagem de erro
+        }
+
+---
+
+## - Pegar pontos de coletas ativos e pausados
+### GET "/places/pickup"
+
+* Resposta
+
+        {
+        "pickupPoints": {
+            "ativos": [
+                {
+                "id": "52311335...",
+                "name": "Nino's Pet Shop",
+                "cep": "03644000",
+                "neighborhood": "Penha",
+                "street": "Rua Embirussu",
+                "number": "66A",
+                "schedule": "Seg 8 às 17h / Ter. e qua. 18 às 21h"
+                },
+            ],
+            "pausados": []
+            }
         }
 
         OU
