@@ -7,6 +7,7 @@ Parte Backend do website da ONG Ecopatas
 - Criar ponto de coleta
 - Pegar pontos de coletas ativos e pausados
 - Criar FAQ
+- Pegar FAQs
 ---
 
 ## - Login
@@ -130,6 +131,29 @@ Parte Backend do website da ONG Ecopatas
 
         {
             "message": "FAQ criada com sucesso"
+        }
+
+        OU
+
+        { 
+            "error": Mensagem de erro
+        }
+
+---
+
+## - Pegar FAQs
+### GET "/questions/faqs"
+
+* Resposta
+
+        {
+        "faqs": [
+            {
+            "id": "0a2dd28a-a785-4372-af2d-a1359c3c7e20",
+            "question": "Onde fica a Ecopatas?",
+            "answer": "A Ecopatas fica em São Paulo"
+            }
+          ]
         }
 
         OU
