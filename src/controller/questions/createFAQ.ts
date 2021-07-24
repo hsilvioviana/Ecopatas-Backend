@@ -7,9 +7,11 @@ export const createFAQ = async (req: Request, res: Response) : Promise<void> => 
 
     try {
 
+        const token = req.headers.authorization as string
+
         const { question, answer } = req.body
 
-        const input: createFAQ_DTO = { question, answer }
+        const input: createFAQ_DTO = { token, question, answer }
 
         await createFAQBusiness(input)
 

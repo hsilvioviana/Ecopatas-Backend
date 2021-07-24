@@ -1,5 +1,6 @@
 export type createFAQ_DTO= {
 
+    token: string
     question: string,
     answer: string
 }
