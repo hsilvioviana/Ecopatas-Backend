@@ -29,3 +29,11 @@ longitude VARCHAR(64) NOT NULL,
 createdAt DATE NOT NULL,
 updatedAt DATE NOT NULL
 );
+
+CREATE TABLE FAQs (
+id VARCHAR(64) PRIMARY KEY,
+question VARCHAR(255) NOT NULL,
+answer TEXT NOT NULL,
+createdAt DATE NOT NULL,
+updatedAt DATE NOT NULL
+);

@@ -1,6 +1,6 @@
 import { Request, Response } from "express"
 import { getPickupPointsBusiness } from "../../business/places/getPickupPointsBusiness"
-import { pickupPoints } from "../../model/places/getPickupPoints"
+import { pickupPoints } from "../../model/places/getPickupPointsModels"
 
 
 export const getPickupPoints = async (req: Request, res: Response) : Promise<void> => {
