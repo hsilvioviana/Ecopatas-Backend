@@ -1,15 +1,11 @@
-export type cep = {
+export type pickupPoint = {
 
     id: string,
+    name: string,
     cep: string,
-    latitude: string,
-    longitude: string
-}
-
-export type cepAddition = {
-
-    id: string,
-    cep: string,
-    latitude: string,
-    longitude: string
+    region: string,
+    neighborhood: string,
+    street: string,
+    number: string,
+    schedule: string,
 }

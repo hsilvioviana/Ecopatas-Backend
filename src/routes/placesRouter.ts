@@ -1,9 +1,9 @@
 import { Router } from "express"
 import { createPickupPoint } from "../controller/places/createPickupPoint"
-import { getPickupPoints } from "../controller/places/getPickupPoints"
+import { getOrganizedPickupPoints } from "../controller/places/getOrganizedPickupPoints"
 
 
 export const placesRouter = Router()
 
-placesRouter.get("/pickup", getPickupPoints)
+placesRouter.get("/organized/pickup", getOrganizedPickupPoints)
 placesRouter.post("/create/pickup", createPickupPoint)
