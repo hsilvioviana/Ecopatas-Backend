@@ -9,9 +9,9 @@ export const createPickupPoint = async (req: Request, res: Response) : Promise<v
 
         const token = req.headers.authorization as string
 
-        const { name, cep, neighborhood, street, number, schedule } = req.body
+        const { name, cep, region, neighborhood, street, number, schedule } = req.body
 
-        const input: createPickupPointDTO = { token, name, cep, neighborhood, street, number, schedule }
+        const input: createPickupPointDTO = { token, name, cep, region, neighborhood, street, number, schedule }
 
         await createPickupPointBusiness(input)
 
