@@ -85,7 +85,7 @@ Parte Backend do website da ONG Ecopatas
 ---
 
 ## - Pegar pontos de coletas
-### GET "/places/places/simple/pickup"
+### GET "/places/simple/pickup"
 
 * Resposta
 
