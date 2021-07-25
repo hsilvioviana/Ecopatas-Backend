@@ -5,7 +5,8 @@ Parte Backend do website da ONG Ecopatas
 ## Funcionalidades
 - Login
 - Criar ponto de coleta
-- Pegar pontos de coletas ativos e pausados
+- Pegar pontos de coletas
+- Pegar pontos de coletas organizados
 - Criar FAQ
 - Pegar FAQs
 - Fale Conosco
@@ -53,18 +54,20 @@ Parte Backend do website da ONG Ecopatas
 
         name = VARCHAR(64)
         cep = VARCHAR(64)
+        region = VARCHAR(64)
         neighborhood = VARCHAR(64)
         street = VARCHAR(64)
         number = VARCHAR(64)
         schedule = VARCHAR(255)
 
         {
-            "name": "Nino's Pet Shop",
-            "cep": "03644000",
-            "neighborhood": "Penha",
-            "street": "Rua Embirussu",
-            "number": "66A",
-            "schedule": "Seg 8 às 17h / Ter. e qua. 18 às 21h"
+                "name": "Instituto Edison",
+                "cep": "01020-000",
+                "region": "Centro de São Paulo",
+                "neighborhood": "Sé",
+                "street": "Rua Tabatinguera",
+                "number": "122",
+                "schedule": "Seg. a sex. 8 às 22h"
         }
 
 * Resposta
@@ -81,26 +84,116 @@ Parte Backend do website da ONG Ecopatas
 
 ---
 
-## - Pegar pontos de coletas ativos e pausados
-### GET "/places/pickup"
+## - Pegar pontos de coletas
+### GET "/places/places/simple/pickup"
 
 * Resposta
 
         {
-        "pickupPoints": {
-            "ativos": [
-                {
-                "id": "52311335...",
-                "name": "Nino's Pet Shop",
-                "cep": "03644000",
-                "neighborhood": "Penha",
-                "street": "Rua Embirussu",
-                "number": "66A",
-                "schedule": "Seg 8 às 17h / Ter. e qua. 18 às 21h"
-                },
-            ],
-            "pausados": []
+          "pickupPoints": [
+            {
+              "id": "69458c86-dc90-476a-84f7-3f0ddd499bd7",
+              "name": "Instituto Edison",
+              "cep": "01020-000",
+              "region": "Centro de São Paulo",
+              "neighborhood": "Sé",
+              "street": "Rua Tabatinguera",
+              "number": "122",
+              "schedule": "Seg. a sex. 8 às 22h"
+            },
+            {
+              "id": "d252efa6-aad3-4f7e-9f7e-4fe5b635377b",
+              "name": "Pet City Animal Center",
+              "cep": "01536-000",
+              "region": "Centro de São Paulo",
+              "neighborhood": "Cambuci",
+              "street": "Av. Lacerda Franco",
+              "number": "92",
+              "schedule": "Seg. a sáb. 8 às 18h"
             }
+          ]
+        }
+
+        OU
+
+        { 
+            "error": Mensagem de erro
+        }
+
+---
+
+## - Pegar pontos de coletas organizados
+### GET "/places/places/organized/pickup"
+
+* Resposta
+
+        {
+          "pickupPoints": {
+            "Leste de São Paulo": {
+              "Penha": [
+                {
+                  "id": "52311335-d149-4781-944c-21866cc5f951",
+                  "name": "Nino's Pet Shop",
+                  "cep": "03644-000",
+                  "region": "Leste de São Paulo",
+                  "neighborhood": "Penha",
+                  "street": "Rua Embirussu",
+                  "number": "66A",
+                  "schedule": "Seg 8 às 17h / Ter. e qua. 18 às 21h"
+                }
+              ]
+            },
+            "Centro de São Paulo": {
+              "Sé": [
+                {
+                  "id": "69458c86-dc90-476a-84f7-3f0ddd499bd7",
+                  "name": "Instituto Edison",
+                  "cep": "01020-000",
+                  "region": "Centro de São Paulo",
+                  "neighborhood": "Sé",
+                  "street": "Rua Tabatinguera",
+                  "number": "122",
+                  "schedule": "Seg. a sex. 8 às 22h"
+                }
+              ],
+              "Aclimação": [
+                {
+                  "id": "778cbe4e-a2f1-445d-9355-ead4a0a31526",
+                  "name": "Costelão do Boni",
+                  "cep": "04109-040",
+                  "region": "Centro de São Paulo",
+                  "neighborhood": "Aclimação",
+                  "street": "Rua Brás Cubas",
+                  "number": "344",
+                  "schedule": "Ter. a dom. 11 às 22h"
+                }
+              ],
+              "Cambuci": [
+                {
+                  "id": "d252efa6-aad3-4f7e-9f7e-4fe5b635377b",
+                  "name": "Pet City Animal Center",
+                  "cep": "01536-000",
+                  "region": "Centro de São Paulo",
+                  "neighborhood": "Cambuci",
+                  "street": "Av. Lacerda Franco",
+                  "number": "92",
+                  "schedule": "Seg. a sáb. 8 às 18h"
+                }
+              ],
+              "Brás": [
+                {
+                  "id": "d2d6c46d-332c-49d9-abef-14a674b68336",
+                  "name": "Padaria Nova Jaguaribe",
+                  "cep": "04884-370",
+                  "region": "Centro de São Paulo",
+                  "neighborhood": "Brás",
+                  "street": "Rua Piratininga",
+                  "number": "456",
+                  "schedule": "Diariamente 7 às 20h"
+                }
+              ]
+            }
+          }
         }
 
         OU
