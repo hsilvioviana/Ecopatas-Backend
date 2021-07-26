@@ -1,5 +1,22 @@
 # Ecopatas-Backend
-Parte Backend do website da ONG Ecopatas
+Parte Backend do website da ONG Ecopatas feito no PROVIHACK4GOOD 2021 que durou 4 dias.
+
+## *Observação
+Os Endpoints foram feitos nos 2 primeiros dias de hackhaton. A partir do terceiro dia foi decidido que a solução que atende melhor a ONG é utilizar o Firebase, devido o MVP só precisar fazer requisições simples, e para a ONG não é ideal gastar recursos para a hospedagem da API e do Banco de Dados, o Firebase foi escolhido por se tratar de uma plataforma gratuita e com qualidade. No futuro o website poderá utilizar esses endpoints se necessário, mas precisará passar por revisão já que alguns endpoints apresentam problemas que não foram solucionados pois o foco era o Firebase.
+
+### Erros
+O endpoint "Pegar pontos de coletas organizados" não está funcionando depois que foi inserido todos os pontos de coleta no banco de dados, e o endpoint "Fale Conosco" envia um email sem estilização.
+
+### Hospedagem
+
+Os endpoints desse repositório estão no https://ecopatas.herokuapp.com, para acessar é necessário apenas fornecer os endpoints depois da url com o método apropriado (Endpoints de login e criação não estão disponível para uso, por modificar o banco de dados)
+
+Os endpoints do firebase são: 
+
+https://test-82d8c-default-rtdb.firebaseio.com/pickupPoints.json para o get de pontos de coleta
+
+https://test-82d8c-default-rtdb.firebaseio.com/FAQs.json para o get de FAQs
+
 
 ---
 ## Funcionalidades
