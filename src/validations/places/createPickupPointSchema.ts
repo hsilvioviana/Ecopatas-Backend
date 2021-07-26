@@ -34,7 +34,7 @@ export const createPickupPointSchema = yup.object({
     .typeError("A rua deve ser string"),
     number: yup.string()
     .min(1, "O número da rua deve ter no mínimo 1 caracteres")
-    .max(16, "O número da rua deve ter no máximo 16 caracteres")
+    .max(64, "O número da rua deve ter no máximo 64 caracteres")
     .required("O número da rua é obrigatória")
     .typeError("O número da rua deve ser string"),
     schedule: yup.string()
