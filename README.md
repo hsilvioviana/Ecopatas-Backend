@@ -9,7 +9,7 @@ O endpoint "Pegar pontos de coletas organizados" não está funcionando depois q
 
 ### Hospedagem
 
-Os endpoints desse repositório estão no https://ecopatas.herokuapp.com, para acessar é necessário apenas fornecer os endpoints depois da url com o método apropriado (Endpoints de login e criação não estão disponível para uso, por modificar o banco de dados)
+Os endpoints desse repositório estão no https://ecopatas.herokuapp.com, para acessar é necessário apenas fornecer os endpoints depois da url com o método apropriado (Endpoints de login e criação não estão disponível para uso, pois eles alteram o banco de dados)
 
 Os endpoints do firebase são: 
 
